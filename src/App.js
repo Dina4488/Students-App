@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage/HomePage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import SignupPage from './pages/SignupPgae/SignupPage';
 import StudentsPage from './pages/StudentsPage/StudentsPage';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

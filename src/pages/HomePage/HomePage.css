@@ -1,0 +1,34 @@
+.p-home .p-img {
+    display: inline-block;
+    background-image: url(../../images/c.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: 50% 50%; */
+    vertical-align: middle;
+    line-height: 0;
+    font-size: 0;
+    width: 100%;
+    height: 70vh;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.p-home .p-header{
+    color: #C3DCF0;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.p-home .p-header > h1 {
+    font-weight: bold;  
+}
+
+@font-face {
+    font-family: 'Suez One', serif;
+    src: url("../../images/SuezOne-Regular.ttf");
+}    

@@ -7,11 +7,16 @@ import SignupPage from './pages/SignupPgae/SignupPage';
 import StudentsPage from './pages/StudentsPage/StudentsPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar/NavBar';
+import { useState } from 'react';
 
 function App() {
+    const [users, setUsers] = useState("");
+    const [activeUser, setActiveUser] = useState("");
+
+
   return (
     <>
-    <NavBar/>
+    <NavBar activeUser={activeUser}/>
     <HashRouter>
         <Switch>
             <Route exact path="/"><HomePage/></Route>

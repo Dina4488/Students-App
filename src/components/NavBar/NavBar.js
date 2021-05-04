@@ -1,20 +1,31 @@
 import React from 'react'
 import { Nav, Navbar,Link } from 'react-bootstrap'
+import logo from '../../images/logo_students.png'; 
 
-function NavBar() {
+function NavBar({activeUser}) {
+
     return (
         <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="#home">Home</Navbar.Brand>
+        <Navbar.Brand href="#/">
+            <img
+            src={logo}
+            width="30"
+            height="30"
+            className="d-inline-block align-top"
+            alt="Home"
+         />Home
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>          
+            {activeUser ? <Nav.Link href="#/">Link</Nav.Link> : null}
+            {activeUser ?<Nav.Link href="#/">Link</Nav.Link> : null}
+            {activeUser ?<Nav.Link href="#/">Link</Nav.Link> : null}
           </Nav>
           <Nav className="ml-auto">
-            <Nav.Link href="#link">Login</Nav.Link>
-            <Nav.Link href="#link">Signup</Nav.Link> 
+            {!activeUser ?<Nav.Link href="#/login">Login</Nav.Link> : null}
+            {!activeUser ? <Nav.Link href="#/signup">Signup</Nav.Link> : null}
+            {activeUser ? <Nav.Link href="#/logout">Logout</Nav.Link> : null}
           </Nav>        
         </Navbar.Collapse>
       </Navbar>

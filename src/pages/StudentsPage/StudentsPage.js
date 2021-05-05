@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Redirect } from 'react-router'
+import ActiveUserContext from '../../shared/ActiveUserContext'
 
-function StudentsPage({activeUser}) {
+
+function StudentsPage() {
+const activeUser = useContext(ActiveUserContext)
 
     if (!activeUser) {
         return <Redirect to="/"/>
@@ -11,6 +14,7 @@ function StudentsPage({activeUser}) {
     return (
         <div>
             StudentsPage
+            hello {activeUser.fname}
         </div>
     )
 }

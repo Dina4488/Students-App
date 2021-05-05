@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react';
 import { Nav, Navbar,Link } from 'react-bootstrap'
 import logo from '../../images/logo_students.png'; 
+import ActiveUserContext from '../../shared/ActiveUserContext';
 
-function NavBar({activeUser , onLogout}) {
+function NavBar({onLogout}) {
+
+    const activeUser = useContext(ActiveUserContext);
 
     return (
         <Navbar bg="light" expand="lg">
@@ -13,7 +16,7 @@ function NavBar({activeUser , onLogout}) {
             height="30"
             className="d-inline-block align-top"
             alt="Home"
-         />Home
+         />בית
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -23,9 +26,9 @@ function NavBar({activeUser , onLogout}) {
             {activeUser ?<Nav.Link href="#/students">Students</Nav.Link> : null}
           </Nav>
           <Nav className="ml-auto">
-            {!activeUser ?<Nav.Link href="#/login">Login</Nav.Link> : null}
-            {!activeUser ? <Nav.Link href="#/signup">Signup</Nav.Link> : null}
-            {activeUser ? <Nav.Link href="#" onClick={() => onLogout()}>Logout</Nav.Link> : null}
+            {!activeUser ?<Nav.Link href="#/login">כניסה</Nav.Link> : null}
+            {!activeUser ? <Nav.Link href="#/signup">הרשמה</Nav.Link> : null}
+            {activeUser ? <Nav.Link href="#" onClick={() => onLogout()}>יציאה</Nav.Link> : null}
           </Nav>        
         </Navbar.Collapse>
       </Navbar>

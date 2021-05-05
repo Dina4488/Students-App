@@ -3,8 +3,7 @@ import { Form , Button } from 'react-bootstrap'
 import './LoginPage.css';
 import logo from '../../images/logo_students.png'; 
 import {  MdPerson } from 'react-icons/md';
-import { FaLock } from 'react-icons/fa'
-import { Redirect } from 'react-router';
+import { FaLock } from 'react-icons/fa';
 
 
 function LoginPage() {

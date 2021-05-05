@@ -8,30 +8,33 @@ import StudentsPage from './pages/StudentsPage/StudentsPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar/NavBar';
 import { useState } from 'react';
+import ActiveUserContext from './shared/ActiveUserContext';
+import usersJSON from './data/users.json';
+import UserModel from './model/UserModel/UserModel';
 
 function App() {
-    const [users, setUsers] = useState("");
-    const [activeUser, setActiveUser] = useState({ user:"Dina"});
+    const [users, setUsers] = useState(usersJSON.map( plainuser => new UserModel(plainuser)));
+    const [activeUser, setActiveUser] = useState(users[0]);
 
 
   return (
-    <>
-    {/* <NavBar activeUser={activeUser} onLogOut={ () => setActiveUser(null)}/> */}
+    <ActiveUserContext.Provider value={activeUser}>
     <HashRouter>
         <Switch>
             <Route exact path="/">
-                <NavBar activeUser={activeUser} onLogout={() => setActiveUser(null)}/>
+                <NavBar onLogout={() => setActiveUser(null)}/>
                 <HomePage/>
             </Route>
             <Route exact path="/login"><LoginPage/></Route>
             <Route exact path="/signup"><SignupPage/></Route>
             <Route exact path="/students">
-                <NavBar activeUser={activeUser} onLogout={() => setActiveUser(null)}/>
-                <StudentsPage activeUser={activeUser}/>
+                <NavBar onLogout={() => setActiveUser(null)}/>
+                <StudentsPage />
             </Route>
         </Switch>
-    </HashRouter>
-    </>
+        </HashRouter>
+       </ActiveUserContext.Provider> 
+
     );
 }
 

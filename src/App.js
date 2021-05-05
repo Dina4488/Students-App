@@ -14,8 +14,8 @@ import UserModel from './model/UserModel/UserModel';
 
 function App() {
     const [users, setUsers] = useState(usersJSON.map( plainuser => new UserModel(plainuser)));
-    const [activeUser, setActiveUser] = useState(users[0]);
-
+    const [activeUser, setActiveUser] = useState("");
+    
 
   return (
     <ActiveUserContext.Provider value={activeUser}>
@@ -25,7 +25,7 @@ function App() {
                 <NavBar onLogout={() => setActiveUser(null)}/>
                 <HomePage/>
             </Route>
-            <Route exact path="/login"><LoginPage/></Route>
+            <Route exact path="/login"><LoginPage users={users} onLogin={user =>setActiveUser(user)} /></Route>
             <Route exact path="/signup"><SignupPage/></Route>
             <Route exact path="/students">
                 <NavBar onLogout={() => setActiveUser(null)}/>

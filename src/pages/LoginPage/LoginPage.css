@@ -28,10 +28,11 @@
     font-family: Varela Round,Roboto,Open Sans Hebrew,Helvetica Neue,sans-serif,Arial;
 }
 
-@media only screen and (max-height: 825px)
+/* @media only screen and (max-height: 825px) {
 .p-login {
     margin: 15px auto;
 }
+} */
 
 .p-header > h2 {
     font-size: 30px;

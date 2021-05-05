@@ -2,7 +2,7 @@ import React from 'react'
 import { Nav, Navbar,Link } from 'react-bootstrap'
 import logo from '../../images/logo_students.png'; 
 
-function NavBar({activeUser}) {
+function NavBar({activeUser , onLogout}) {
 
     return (
         <Navbar bg="light" expand="lg">
@@ -20,12 +20,12 @@ function NavBar({activeUser}) {
           <Nav className="mr-auto">
             {activeUser ? <Nav.Link href="#/">Link</Nav.Link> : null}
             {activeUser ?<Nav.Link href="#/">Link</Nav.Link> : null}
-            {activeUser ?<Nav.Link href="#/">Link</Nav.Link> : null}
+            {activeUser ?<Nav.Link href="#/students">Students</Nav.Link> : null}
           </Nav>
           <Nav className="ml-auto">
             {!activeUser ?<Nav.Link href="#/login">Login</Nav.Link> : null}
             {!activeUser ? <Nav.Link href="#/signup">Signup</Nav.Link> : null}
-            {activeUser ? <Nav.Link href="#/logout">Logout</Nav.Link> : null}
+            {activeUser ? <Nav.Link href="#" onClick={() => onLogout()}>Logout</Nav.Link> : null}
           </Nav>        
         </Navbar.Collapse>
       </Navbar>

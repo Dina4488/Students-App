@@ -26,17 +26,17 @@ function LoginPage() {
                     <Form.Control 
                             className="p-input"
                             type="email" 
-                            placeholder="Enter email" />                 
+                            placeholder="דואר אלקטרוני" />                 
                 </Form.Group>
                 <Form.Group className="p-form-1">
                     <FaLock/>                    
                     <Form.Control
                             className="p-input" 
                             type="password" 
-                            placeholder="Password" />
+                            placeholder="סיסמא" />
                 </Form.Group>               
                 <Button className="p-login-button" type="submit">
-                    Submit
+                    כניסה
                 </Button>
             </Form>
             </div>            

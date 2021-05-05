@@ -11,18 +11,24 @@ import { useState } from 'react';
 
 function App() {
     const [users, setUsers] = useState("");
-    const [activeUser, setActiveUser] = useState("");
+    const [activeUser, setActiveUser] = useState({ user:"Dina"});
 
 
   return (
     <>
-    <NavBar activeUser={activeUser}/>
+    {/* <NavBar activeUser={activeUser} onLogOut={ () => setActiveUser(null)}/> */}
     <HashRouter>
         <Switch>
-            <Route exact path="/"><HomePage/></Route>
+            <Route exact path="/">
+                <NavBar activeUser={activeUser} onLogout={() => setActiveUser(null)}/>
+                <HomePage/>
+            </Route>
             <Route exact path="/login"><LoginPage/></Route>
             <Route exact path="/signup"><SignupPage/></Route>
-            <Route exact path="/students"><StudentsPage/></Route>
+            <Route exact path="/students">
+                <NavBar activeUser={activeUser} onLogout={() => setActiveUser(null)}/>
+                <StudentsPage activeUser={activeUser}/>
+            </Route>
         </Switch>
     </HashRouter>
     </>

@@ -16,7 +16,7 @@ console.log(courses);
                         <th>קורס</th>                                  
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className="students-body">
                      { courses.map(one => 
                      <tr><StudentGrades courses={one}/> </tr>)
                      }                   

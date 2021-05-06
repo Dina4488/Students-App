@@ -5,7 +5,7 @@
         "lname": "Lew",
         "email": "a@a.com",
         "pwd": "123",
-        "role": "admin"
+        "role": "admin"        
     },
     {
         "id": 2,
@@ -13,6 +13,27 @@
         "lname": "Cohen",
         "email": "b@b.com",
         "pwd": "123",
-        "role" : "student"
-    }
+        "role" : "student",
+        "courses":[ {
+            "courseId": "1",
+            "courseGrade" : "72"
+            },
+            {
+            "courseId": "2",
+            "courseGrade" : "75"
+            },
+            {
+            "courseId": "3",
+            "courseGrade" : "80"
+            },
+            {
+            "courseId": "4",
+            "courseGrade" : "99"
+            },
+            {
+                "courseId": "5",
+                "courseGrade" : "60"
+                }
+            ]
+    }    
 ]

@@ -14,7 +14,7 @@ import UserModel from './model/UserModel/UserModel';
 
 function App() {
     const [users, setUsers] = useState(usersJSON.map( plainuser => new UserModel(plainuser)));
-    const [activeUser, setActiveUser] = useState("");
+    const [activeUser, setActiveUser] = useState(users[1]);
     
 
   return (

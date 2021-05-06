@@ -16,10 +16,8 @@ const activeUser = useContext(ActiveUserContext)
     return (
         <div>
             <h4>hello {activeUser.fname}</h4>  
-        <Container>
-            <Row>                
-                 {<StudentGradesTable courses={activeUser.courses}/>}
-            </Row>
+        <Container>                       
+                 {<StudentGradesTable courses={activeUser.courses}/>}          
             </Container>
 
         </div>

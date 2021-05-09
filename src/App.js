@@ -10,12 +10,14 @@ import NavBar from './components/NavBar/NavBar';
 import { useState } from 'react';
 import ActiveUserContext from './shared/ActiveUserContext';
 import usersJSON from './data/users.json';
+import coursesJSON from './data/courses.json';
 import UserModel from './model/UserModel/UserModel';
+import CourseModel from './model/CourseModel/CourseModel';
 
 function App() {
     const [users, setUsers] = useState(usersJSON.map( plainuser => new UserModel(plainuser)));
     const [activeUser, setActiveUser] = useState(users[1]);
-    
+    const [coursesList, setCoursesList] = useState(coursesJSON.map ( course => new CourseModel(course)));
 
   return (
     <ActiveUserContext.Provider value={activeUser}>
@@ -29,7 +31,7 @@ function App() {
             <Route exact path="/signup"><SignupPage/></Route>
             <Route exact path="/students">
                 <NavBar onLogout={() => setActiveUser(null)}/>
-                <StudentsPage />
+                <StudentsPage coursesList={coursesList} />
             </Route>
         </Switch>
         </HashRouter>

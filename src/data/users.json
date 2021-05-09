@@ -15,25 +15,25 @@
         "pwd": "123",
         "role" : "student",
         "courses":[ {
-            "courseId": "1",
+            "courseId": 1,
             "courseGrade" : "72"
             },
             {
-            "courseId": "2",
+            "courseId": 2,
             "courseGrade" : "75"
             },
             {
-            "courseId": "3",
+            "courseId": 3,
             "courseGrade" : "80"
             },
             {
-            "courseId": "4",
+            "courseId": 4,
             "courseGrade" : "99"
             },
             {
-                "courseId": "5",
-                "courseGrade" : "60"
-                }
+            "courseId": 5,
+            "courseGrade" : "60"
+            }
             ]
     }    
 ]

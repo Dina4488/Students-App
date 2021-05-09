@@ -1,7 +1,7 @@
 export default class CourseModel {
     constructor(plainCourse){
         this.courseId = plainCourse.courseId;
-        this.name = plainCourse.name;
+        this.courseName = plainCourse.courseName;
         this.courseGrade = plainCourse.courseGrade;       
     }
 

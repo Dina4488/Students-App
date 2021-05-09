@@ -1,22 +1,22 @@
 [
     {
-        "id":1,
-        "name":"מתמטיקה"
+        "courseId":1,
+        "courseName":"מתמטיקה"
     },
     {
-        "id":2,
-        "name":"אנגלית"
+        "courseId":2,
+        "courseName":"אנגלית"
     },
     {
-        "id":3,
-        "name":"מדע"
+        "courseId":3,
+        "courseName":"מדע"
     },
     {
-        "id":4,
-        "name":"עברית"
+        "courseId":4,
+        "courseName":"עברית"
     },
     {
-        "id":5,
-        "name":"אומנות"
+        "courseId":5,
+        "courseName":"אומנות"
     }
 ]

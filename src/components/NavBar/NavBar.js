@@ -21,9 +21,12 @@ function NavBar({onLogout}) {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            {activeUser ? <Nav.Link href="#/">Link</Nav.Link> : null}
-            {activeUser ?<Nav.Link href="#/">Link</Nav.Link> : null}
-            {activeUser ?<Nav.Link href="#/students">Students</Nav.Link> : null}
+            {activeUser ? <Nav.Link href="#/">Link</Nav.Link> : null}   
+            {activeUser ?<Nav.Link href="#/sendMsg">שלח הודעה</Nav.Link> : null}
+            {activeUser && activeUser.role === "admin" ? 
+                <Nav.Link href="#/updateGrades">עדכן ציונים</Nav.Link> : null}
+             {activeUser && activeUser.role === "student" ? 
+                 <Nav.Link href="#/students">ציונים</Nav.Link> : null }
           </Nav>
           <Nav className="ml-auto">
             {!activeUser ?<Nav.Link href="#/login">כניסה</Nav.Link> : null}

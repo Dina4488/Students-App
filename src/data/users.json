@@ -35,5 +35,22 @@
             "courseGrade" : "60"
             }
             ]
-    }    
+    },
+    {
+        "id": 2,
+        "fname": "Arik",
+        "lname": "Cohen",
+        "email": "c@c.com",
+        "pwd": "123",
+        "role" : "student",
+        "courses":[ {
+            "courseId": 1,
+            "courseGrade" : "72"
+            },
+            {
+            "courseId": 2,
+            "courseGrade" : "75"
+            }           
+            ]
+    }     
 ]

@@ -13,10 +13,12 @@ import usersJSON from './data/users.json';
 import coursesJSON from './data/courses.json';
 import UserModel from './model/UserModel/UserModel';
 import CourseModel from './model/CourseModel/CourseModel';
+import SendMsgPage from './pages/SendMsgPage/SendMsgPage';
+import UpdateGrades from './pages/UpdateGrades/UpdateGrades';
 
 function App() {
     const [users, setUsers] = useState(usersJSON.map( plainuser => new UserModel(plainuser)));
-    const [activeUser, setActiveUser] = useState(users[1]);
+    const [activeUser, setActiveUser] = useState(users[0]);
     const [coursesList, setCoursesList] = useState(coursesJSON.map ( course => new CourseModel(course)));
 
   return (
@@ -32,6 +34,14 @@ function App() {
             <Route exact path="/students">
                 <NavBar onLogout={() => setActiveUser(null)}/>
                 <StudentsPage coursesList={coursesList} />
+            </Route>
+            <Route exact path="/sendMsg">
+                <NavBar onLogout={() => setActiveUser(null)}/>
+                <SendMsgPage />
+            </Route>
+            <Route exact path="/updateGrades">
+                <NavBar onLogout={() => setActiveUser(null)}/>
+                <UpdateGrades coursesList={coursesList} users={users} />
             </Route>
         </Switch>
         </HashRouter>

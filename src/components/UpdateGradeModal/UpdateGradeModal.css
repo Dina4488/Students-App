@@ -1,0 +1,13 @@
+.c-new-grade{
+    direction: rtl;
+    /* background-color:rgb(144, 238, 180) */
+}
+
+.c-new-grade .c-header > .close {
+    margin-left: 0;
+}
+
+
+.c-new-grade  .c-header  {
+    color: #009879;
+}

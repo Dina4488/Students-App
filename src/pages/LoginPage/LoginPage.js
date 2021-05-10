@@ -15,8 +15,10 @@ function LoginPage({users ,onLogin }) {
     const [showError, setShowError]= useState(false);
     const activeUser = useContext(ActiveUserContext);
 
-    if (activeUser) {
+    if (activeUser && activeUser.role === "student") {
         return <Redirect to="/students"/>
+    } else if (activeUser && activeUser.role === "admin"){
+        return <Redirect to="/updateGrades"/>
     }
 
     

@@ -10,9 +10,9 @@ const [selectedUserIndex, setSelectedUserIndex] = useState(0);
 
 let studentsList = students.map( plainuser => new StudentModel(plainuser));
 
-const options = studentsList.map((student, index) => 
-    <option value={index}>{`${student.fname} ${student.lname}`}</option>);
-    
+const options = studentsList.map((student, index) =>    
+    <option value={index}>{student.name}</option>);
+
     return (
         <div className="p-students">
             <div className="p-students-header">
@@ -28,15 +28,15 @@ const options = studentsList.map((student, index) =>
             </div>                    
              <Table striped bordered hover className="students-table">
                 <thead>
-                    <tr>                        
+                    <tr>                       
                         <th>ציון</th> 
                         <th>שם הקורס</th>                    
-                        <th>קורס</th>                                                      
+                        <th>קורס</th>
                     </tr>
                 </thead>
                 <tbody className="students-body">
                     { studentsList[selectedUserIndex].courses.map(one => 
-                        <tr><TeacherGrades courses={one}/> </tr>)
+                        <tr><TeacherGrades courses={one} coursesList={courses}/> </tr>)
                     }     
                 </tbody>
                 </Table>

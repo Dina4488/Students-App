@@ -52,5 +52,26 @@
             "courseGrade" : "75"
             }           
             ]
-    }     
+    },
+    {
+        "id": 4,
+        "fname": "Shani",
+        "lname": "Levi",
+        "email": "d@d.com",
+        "pwd": "123",
+        "role" : "student",
+        "courses":[ {          
+            "courseId": 2,
+            "courseGrade" : "80"
+            },
+            {
+            "courseId": 4,
+            "courseGrade" : "70"
+            },
+            {
+            "courseId": 5,
+            "courseGrade" : "95"
+            }
+            ]
+    } 
 ]

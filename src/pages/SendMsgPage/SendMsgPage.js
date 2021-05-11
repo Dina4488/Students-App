@@ -6,7 +6,7 @@ import './SendMsgPage.css'
 import {FcInspection}  from "react-icons/fc";
 
 
-export default function SendMsgPage({addMessage}) {
+function SendMsgPage({addMessage}) {
 
     const activeUser = useContext(ActiveUserContext);
     const [topic,setTopic] = useState("");
@@ -74,3 +74,5 @@ export default function SendMsgPage({addMessage}) {
         </Container>
     )
 }
+
+export default SendMsgPage;

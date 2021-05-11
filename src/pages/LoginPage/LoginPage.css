@@ -9,7 +9,8 @@
     align-self: center;
     max-width: 320px;
     box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
-    margin: 15px auto;
+    margin: 100px auto;
+    height: 500px;
 }
 .p-header > img {
     display: block;

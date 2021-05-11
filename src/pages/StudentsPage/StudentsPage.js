@@ -19,8 +19,7 @@ for (let course of studentCourses){
         course.courseName = courseName;
     }
     return (
-        <div>
-            <h4>hello {activeUser.fname}</h4>  
+        <div>           
         <Container>                       
                  {<StudentGradesTable courses={studentCourses}/>}          
             </Container>

@@ -16,9 +16,8 @@ export default function UpdateGrades({coursesList , users}) {
     }
 
     return (
-        <div>
-                <h4>hello {activeUser.fname}</h4>  
-        <Container>                       
+        <div>                
+            <Container>                       
                  {<TeacherGradesTable courses={coursesList} students={onlystudents}/>}          
             </Container>
 

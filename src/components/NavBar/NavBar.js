@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Nav, Navbar,Link } from 'react-bootstrap'
 import logo from '../../images/logo_students.png'; 
 import ActiveUserContext from '../../shared/ActiveUserContext';
+import './NavBar.css'
 
 function NavBar({onLogout ,messages}) {
 
@@ -9,14 +10,14 @@ function NavBar({onLogout ,messages}) {
 
     return (
         <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="#/">
+        <Navbar.Brand href="#/" className="p-navbar">
             <img
             src={logo}
             width="30"
             height="30"
             className="d-inline-block align-top"
             alt="Home"
-         />בית
+         /> <span className="p-span">{activeUser ? activeUser.name : null}</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

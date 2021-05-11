@@ -24,11 +24,11 @@ function setIndex(event){
             <SelectStudent selectedUserIndex={selectedUserIndex}
                             options={options}
                             setIndex={setIndex}/>           
-             <Table striped bordered hover className="students-table">
+            <Table striped bordered hover className="students-table">
                 <GradesTable studentsList={studentsList}
                             selectedUserIndex={selectedUserIndex}
                             courses={courses}/>              
-                </Table>
+            </Table>
         </div>
     )
 }

@@ -17,8 +17,9 @@ export default function TeacherGrades({ courses ,coursesList}) {
             <td onClick={() => setShowUpdateGradeModal(true)}>{courses.courseGrade}</td>
             <td>{courseName}</td>
             <td>{courses.courseId}</td>
-            <UpdateGradeModal show={showUpdateGradeModal} onClose={() => setShowUpdateGradeModal(false)} 
-            onCreate={onCreate}/>
+            <UpdateGradeModal show={showUpdateGradeModal} 
+                              onClose={() => setShowUpdateGradeModal(false)} 
+                              onCreate={onCreate}/>
     </>
     )
 }

@@ -3,7 +3,7 @@ import { Nav, Navbar,Link } from 'react-bootstrap'
 import logo from '../../images/logo_students.png'; 
 import ActiveUserContext from '../../shared/ActiveUserContext';
 
-function NavBar({onLogout}) {
+function NavBar({onLogout ,messages}) {
 
     const activeUser = useContext(ActiveUserContext);
 
@@ -21,7 +21,8 @@ function NavBar({onLogout}) {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            {activeUser ? <Nav.Link href="#/">Link</Nav.Link> : null}   
+            {activeUser && activeUser.role === "admin"  ? 
+                <Nav.Link href="#/getMessages">רשימת הודעות</Nav.Link> : null}
             {activeUser && activeUser.role === "student" ?
               <Nav.Link href="#/sendMsg">שלח הודעה</Nav.Link> : null}
             {activeUser && activeUser.role === "admin" ? 

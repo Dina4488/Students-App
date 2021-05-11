@@ -15,12 +15,28 @@ import UserModel from './model/UserModel/UserModel';
 import CourseModel from './model/CourseModel/CourseModel';
 import SendMsgPage from './pages/SendMsgPage/SendMsgPage';
 import UpdateGrades from './pages/UpdateGrades/UpdateGrades';
+import MessageModel from './model/MessageModel/MessageModel';
 
 function App() {
     const [users, setUsers] = useState(usersJSON.map( plainuser => new UserModel(plainuser)));
-    const [activeUser, setActiveUser] = useState(users[0]);
+    const [activeUser, setActiveUser] = useState(users[1]);
     const [coursesList, setCoursesList] = useState(coursesJSON.map ( course => new CourseModel(course)));
+    const [messages,setMessages] = useState([]);
 
+
+    function addMessage(topic, desc) {
+        const newMsg = new MessageModel({
+          id: messages[messages.length - 1] + 1,
+          topic,
+          desc,          
+          userId: activeUser.id
+        });
+        
+        setMessages(messages.concat(newMsg));
+        console.log(newMsg)
+        console.log(messages)
+      }
+    
   return (
     <ActiveUserContext.Provider value={activeUser}>
     <HashRouter>
@@ -37,7 +53,8 @@ function App() {
             </Route>
             <Route exact path="/sendMsg">
                 <NavBar onLogout={() => setActiveUser(null)}/>
-                <SendMsgPage />
+                <SendMsgPage messages={messages} users={users}
+                        addMessage={addMessage}/>
             </Route>
             <Route exact path="/updateGrades">
                 <NavBar onLogout={() => setActiveUser(null)}/>

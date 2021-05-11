@@ -7,7 +7,7 @@ export default class UserModel {
         this.pwd = plainUser.pwd;
         this.role = plainUser.role;
         this.courses = plainUser.courses;
-        console.log(this.courses);
+        // console.log(this.courses);
     }
 
     login(email,pwd){

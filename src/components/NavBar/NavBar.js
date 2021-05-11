@@ -22,7 +22,8 @@ function NavBar({onLogout}) {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             {activeUser ? <Nav.Link href="#/">Link</Nav.Link> : null}   
-            {activeUser ?<Nav.Link href="#/sendMsg">שלח הודעה</Nav.Link> : null}
+            {activeUser && activeUser.role === "student" ?
+              <Nav.Link href="#/sendMsg">שלח הודעה</Nav.Link> : null}
             {activeUser && activeUser.role === "admin" ? 
                 <Nav.Link href="#/updateGrades">עדכן ציונים</Nav.Link> : null}
              {activeUser && activeUser.role === "student" ? 

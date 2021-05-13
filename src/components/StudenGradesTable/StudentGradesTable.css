@@ -5,11 +5,12 @@
     font-family: sans-serif;
     min-width: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
 }
 .students-table thead tr {
     background-color: #009879;
     color: #ffffff;
-    text-align: left;
+    text-align: center;
 }
 .students-table th,
 .students-table td {
@@ -34,3 +35,11 @@
     color: #009879 ;
 }
 
+.p-students {
+    margin-top: 25px;
+}
+
+.p-students  > h4 {
+    text-align: right;
+    color: #009879;
+}

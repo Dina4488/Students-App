@@ -4,7 +4,8 @@ export default class MessageModel {
         this.id = plainMsg.id;
         this.topic = plainMsg.topic;
         this.desc = plainMsg.desc;
-        this.userId = plainMsg.userId;    
+        this.userId = plainMsg.userId;
+        this.name = plainMsg.name;  
     }
 
   

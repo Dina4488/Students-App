@@ -8,6 +8,7 @@ console.log(courses);
 
     return (
         <div className="p-students">
+             <h4>רשימת הציונים</h4> 
              <Table striped bordered hover className="students-table">
                 <thead>
                     <tr>

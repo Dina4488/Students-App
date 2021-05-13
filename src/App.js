@@ -11,6 +11,7 @@ import { useState } from 'react';
 import ActiveUserContext from './shared/ActiveUserContext';
 import usersJSON from './data/users.json';
 import coursesJSON from './data/courses.json';
+import messageJSON from './data/messages.json'
 import UserModel from './model/UserModel/UserModel';
 import CourseModel from './model/CourseModel/CourseModel';
 import SendMsgPage from './pages/SendMsgPage/SendMsgPage';
@@ -22,7 +23,7 @@ function App() {
     const [users, setUsers] = useState(usersJSON.map( plainuser => new UserModel(plainuser)));
     const [activeUser, setActiveUser] = useState(users[1]);
     const [coursesList, setCoursesList] = useState(coursesJSON.map ( course => new CourseModel(course)));
-    const [messages,setMessages] = useState([]);
+    const [messages,setMessages] = useState(messageJSON.map( plainMsg => new MessageModel(plainMsg)));
 
 
     function addMessage(topic, desc) {

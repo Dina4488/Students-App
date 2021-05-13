@@ -1,0 +1,12 @@
+.c-messages{
+    margin-top: 25px;
+}
+
+.c-messages  > h4 {
+    text-align: right;
+    color: #009879;
+}
+
+.messages-body , .c-messages  .students-table > thead{
+    text-align:center ;
+}

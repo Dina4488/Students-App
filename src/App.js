@@ -21,15 +21,19 @@ import GetMessagesPage from './pages/GetMessagesPage/GetMessagesPage';
 
 function App() {
     const [users, setUsers] = useState(usersJSON.map( plainuser => new UserModel(plainuser)));
-    const [activeUser, setActiveUser] = useState(users[1]);
+    const [activeUser, setActiveUser] = useState(users[0]);
     const [coursesList, setCoursesList] = useState(coursesJSON.map ( course => new CourseModel(course)));
+    
+    const topicsList = [{"topicId": 1,"topicName":"ערעור"},
+                        {"topicId": 2,"topicName":"שאלה למורה"},
+                        {"topicId": 3,"topicName":"בקשה"}
+                        ]
     const [messages,setMessages] = useState(messageJSON.map( plainMsg => new MessageModel(plainMsg)));
 
-
-    function addMessage(topic, desc) {
+    function addMessage(topicId, desc) {
         const newMsg = new MessageModel({
         //   id: messages[messages.length - 1] + 1,
-          topic,
+          topicId,
           desc,          
           userId: activeUser.id
         });
@@ -57,7 +61,7 @@ function App() {
             <Route exact path="/sendMsg">
                 <NavBar onLogout={() => setActiveUser(null)}/>
                 <SendMsgPage messages={messages} users={users}
-                        addMessage={addMessage}/>
+                        addMessage={addMessage} topicsList={topicsList}/>
             </Route>
             <Route exact path="/updateGrades">
                 <NavBar onLogout={() => setActiveUser(null)}/>
@@ -65,7 +69,7 @@ function App() {
             </Route>
             <Route exact path="/getMessages">
                 <NavBar onLogout={() => setActiveUser(null)} messages={messages}/>
-                <GetMessagesPage users={users} messages={messages} />
+                <GetMessagesPage users={users} messages={messages} topicsList={topicsList}/>
             </Route>
         </Switch>
         </HashRouter>

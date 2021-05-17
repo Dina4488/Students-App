@@ -2,6 +2,7 @@
     width: 600px;
     margin: 50px auto;
     box-shadow: 2px 0px 4px 0px rgb(0 0 0 / 20%), 7px 12px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+    background-color: rgba(0,0,0,.05);
 }
 
 .p-sendMsg > h4{

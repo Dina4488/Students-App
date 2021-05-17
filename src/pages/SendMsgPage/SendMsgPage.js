@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Alert, Button, Container, Form } from 'react-bootstrap'
 import { Redirect } from 'react-router';
 import ActiveUserContext from '../../shared/ActiveUserContext';
@@ -6,27 +6,20 @@ import './SendMsgPage.css'
 import {FcInspection}  from "react-icons/fc";
 
 
-function SendMsgPage({addMessage}) {
+function SendMsgPage({addMessage , topicsList}) {
 
     const activeUser = useContext(ActiveUserContext);
-    const [topic,setTopic] = useState("");
+    const [selectedTopicIndex, setSelectedTopicIndex] = useState(0);    
     const [desc, setDesc] = useState("");
     const [showMsg, setShowMsg]= useState(false);
 
     function  addNewMessage() {
-        if( topic && desc ) {
-            addMessage(topic,desc,activeUser.id);
-            setTopic("");
+        if( selectedTopicIndex && desc ) {
+            addMessage(parseInt(selectedTopicIndex),desc,activeUser.id);            
             setDesc("");
             setShowMsg(true);
         } 
     }
-
-    function onEnter(e) {
-        if (e.charCode === 13 && e.target.value.trim()) {
-            setTopic(e.target.value)
-        }
-      }
 
       function onEnterDesc(e) {
         if (e.charCode === 13 && e.target.value.trim()) {
@@ -34,24 +27,33 @@ function SendMsgPage({addMessage}) {
         }
       }
 
-
-    if (!activeUser) {
+      function setIndex(event){
+        parseInt(setSelectedTopicIndex(event.target.value));
+    }    
+    
+    const  options = topicsList.map((topic, index) =>    
+            <option value={parseInt(topic.topicId)}>{topic.topicName}</option>);    
+    
+    
+      if (!activeUser) {
+        return <Redirect to="/"/>
+    } else if (activeUser.role === "admin") {
         return <Redirect to="/"/>
     }
 
     return (
         <Container className="p-sendMsg">
             <h4><FcInspection/> שלח הודעה </h4>
-            <Form className="p-sendMsg-form">
+            <Form className="p-sendMsg-form">              
+                <Form.Control
+                    as="select"
+                    className="my-1"
+                    custom
+                    value={selectedTopicIndex} 
+                    onChange={setIndex}>                   
+                    {options}
+                </Form.Control>
                 <Form.Group >                   
-                    <Form.Control type="text" placeholder="נושא ההודעה"
-                     onKeyPress={(e) => onEnter(e)}
-                     onChange={(e) => setTopic(e.target.value)}
-                     value={topic} 
-                        // value={topic} onChange={setNewTopic}
-                     />
-                </Form.Group>                          
-                <Form.Group controlId="exampleForm.ControlTextarea1">                   
                     <Form.Control as="textarea"  placeholder="כתוב הודעה" 
                         rows={3} 
                         onKeyPress={(e) => onEnterDesc(e)}

@@ -6,7 +6,7 @@ export default function MessagesTable({messages}) {
         <> 
             <td>{messages.name}</td>
             <td>{messages.desc}</td>
-            <td>{messages.topic}</td>
+            <td>{messages.topicName}</td>
         </>
     )
 }

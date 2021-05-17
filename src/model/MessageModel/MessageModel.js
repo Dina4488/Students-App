@@ -1,12 +1,12 @@
 export default class MessageModel {
-    constructor(plainMsg){
-        // this.courseId = plainCourse.courseId;
+   
+;    constructor(plainMsg){        
         this.id = plainMsg.id;
-        this.topic = plainMsg.topic;
+        this.topicId = plainMsg.topicId;
+        this.topicName = "";
         this.desc = plainMsg.desc;
         this.userId = plainMsg.userId;
-        this.name = plainMsg.name;  
-    }
-
-  
+        this.name = plainMsg.name;
+    }    
 }
+   

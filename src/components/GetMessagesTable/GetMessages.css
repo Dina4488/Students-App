@@ -14,3 +14,8 @@
 .red-message {
     color: red;
 }
+
+.pie {
+    width: 300px;    
+    margin: 0 auto;
+}

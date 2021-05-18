@@ -20,7 +20,7 @@ export default function GetMessagesTable({messages}) {
                 </thead>
                 <tbody className="messages-body">
                      { messages.map(one => 
-                     <tr><MessagesTable messages={one}/> </tr>)
+                     <tr className={one.isNew ? "red-message" : null}><MessagesTable messages={one}/> </tr>)
                      }                   
                 </tbody>
                 </Table>

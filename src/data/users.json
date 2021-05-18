@@ -1,16 +1,16 @@
 [
     {
         "id": 1,
-        "fname": "Dina",
-        "lname": "Lew",
+        "fname": "דינה",
+        "lname": "לבקוביץ",
         "email": "a@a.com",
         "pwd": "123",
         "role": "admin"        
     },
     {
         "id": 2,
-        "fname": "Yair",
-        "lname": "Cohen",
+        "fname": "יאיר",
+        "lname": "כהן",
         "email": "b@b.com",
         "pwd": "123",
         "role" : "student",
@@ -38,8 +38,8 @@
     },
     {
         "id": 3,
-        "fname": "Arik",
-        "lname": "Cohen",
+        "fname": "אריק",
+        "lname": "לוי",
         "email": "c@c.com",
         "pwd": "123",
         "role" : "student",
@@ -55,8 +55,8 @@
     },
     {
         "id": 4,
-        "fname": "Shani",
-        "lname": "Levi",
+        "fname": "שני",
+        "lname": "יששכר",
         "email": "d@d.com",
         "pwd": "123",
         "role" : "student",

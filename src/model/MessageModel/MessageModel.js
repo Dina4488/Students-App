@@ -7,6 +7,7 @@ export default class MessageModel {
         this.desc = plainMsg.desc;
         this.userId = plainMsg.userId;
         this.name = plainMsg.name;
+        this.isNew = plainMsg.isNew;
     }    
 }
    

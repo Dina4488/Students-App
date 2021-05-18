@@ -2,3 +2,13 @@
     color: #009879;
     text-align: right;
 }
+
+.p-students-header  {
+    direction: rtl;
+}
+
+.p-alert-msg {
+    direction: rtl;
+    color: red;
+    text-align: right;
+}

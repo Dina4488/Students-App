@@ -10,3 +10,7 @@
 .messages-body , .c-messages  .students-table > thead{
     text-align:center ;
 }
+
+.red-message {
+    color: red;
+}

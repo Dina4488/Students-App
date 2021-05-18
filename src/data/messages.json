@@ -3,18 +3,21 @@
     "id":1,
     "topicId": 1,
     "desc":"ערעור על  מבחן בחשבון",
-    "userId":2
+    "userId":2,
+    "isNew": false
 },
 {
     "id":2,
     "topicId":2 ,
     "desc":"שאלה לגבי תרגיל 5 ",
-    "userId":2
+    "userId":2,
+    "isNew": false
 },
 {
     "id":3,
     "topicId": 3,
     "desc":"בקשה לענות על המייל ששלחתי",
-    "userId":4
+    "userId":4,
+    "isNew": false
 }
 ]

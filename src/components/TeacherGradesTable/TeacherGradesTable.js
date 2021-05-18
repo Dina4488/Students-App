@@ -29,6 +29,7 @@ function setIndex(event){
                             selectedUserIndex={selectedUserIndex}
                             courses={courses}/>              
             </Table>
+            <h6 className="p-alert-msg"> * שים לב על מנת לעדכן את הציון לחץ על עמודת הציון</h6>
         </div>
     )
 }

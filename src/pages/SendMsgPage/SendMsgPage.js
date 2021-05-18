@@ -9,7 +9,7 @@ import {FcInspection}  from "react-icons/fc";
 function SendMsgPage({addMessage , topicsList}) {
 
     const activeUser = useContext(ActiveUserContext);
-    const [selectedTopicIndex, setSelectedTopicIndex] = useState(0);    
+    const [selectedTopicIndex, setSelectedTopicIndex] = useState(1);    
     const [desc, setDesc] = useState("");
     const [showMsg, setShowMsg]= useState(false);
 
@@ -57,6 +57,7 @@ function SendMsgPage({addMessage , topicsList}) {
                     <Form.Control as="textarea"  placeholder="כתוב הודעה" 
                         rows={3} 
                         onKeyPress={(e) => onEnterDesc(e)}
+                        // onKeyPress={event => (event.charCode >= 128 && event.charCode <= 154 ) || (event.charCode >= 97 && event.charCode <= 122)}
                         onChange={(e) => setDesc(e.target.value)}
                         value={desc} 
                        />

@@ -35,7 +35,8 @@ function App() {
         //   id: messages[messages.length - 1] + 1,
           topicId,
           desc,          
-          userId: activeUser.id
+          userId: activeUser.id,
+          isNew : true
         });
         
         setMessages(messages.concat(newMsg));

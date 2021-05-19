@@ -33,7 +33,8 @@ function NavBar({onLogout ,messages}) {
           </Nav>
           <Nav className="ml-auto">
             {!activeUser ?<Nav.Link href="#/login">כניסה</Nav.Link> : null}
-            {!activeUser ? <Nav.Link href="#/signup">הרשמה</Nav.Link> : null}
+            {activeUser && activeUser.role === "admin" ? 
+               <Nav.Link href="#/signup">הרשמה</Nav.Link> : null}
             {activeUser ? <Nav.Link href="#" onClick={() => onLogout()}>יציאה</Nav.Link> : null}
           </Nav>        
         </Navbar.Collapse>

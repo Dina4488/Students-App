@@ -43,7 +43,21 @@ function App() {
         console.log(newMsg)        
       }
     
-      console.log(messages);
+    function addUser(id,email, fname, lname,pwd){
+        const newUser = new UserModel({
+            id,
+            fname,
+            lname,
+            email,
+            pwd,
+            role:"student",
+            courses:[{
+                "courseId": 1,
+                "courseGrade" : ""
+                }]
+        });
+        setUsers(users.concat(newUser));
+    }
 
   return (
     <ActiveUserContext.Provider value={activeUser}>
@@ -54,7 +68,10 @@ function App() {
                 <HomePage/>
             </Route>
             <Route exact path="/login"><LoginPage users={users} onLogin={user =>setActiveUser(user)} /></Route>
-            <Route exact path="/signup"><SignupPage/></Route>
+            <Route exact path="/signup">
+                <NavBar onLogout={() => setActiveUser(null)}/>
+                <SignupPage addUser={addUser} users={users} onLogin={user =>setActiveUser(user)}/>
+            </Route>
             <Route exact path="/students">
                 <NavBar onLogout={() => setActiveUser(null)}/>
                 <StudentsPage coursesList={coursesList} />

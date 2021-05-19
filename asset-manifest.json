@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/students-app/static/css/main.545fd185.chunk.css",
-    "main.js": "/students-app/static/js/main.049b3b7e.chunk.js",
-    "main.js.map": "/students-app/static/js/main.049b3b7e.chunk.js.map",
-    "runtime-main.js": "/students-app/static/js/runtime-main.3ee26b24.js",
-    "runtime-main.js.map": "/students-app/static/js/runtime-main.3ee26b24.js.map",
-    "static/css/2.4c97ca4f.chunk.css": "/students-app/static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.c8070dd0.chunk.js": "/students-app/static/js/2.c8070dd0.chunk.js",
-    "static/js/2.c8070dd0.chunk.js.map": "/students-app/static/js/2.c8070dd0.chunk.js.map",
-    "static/js/3.05942146.chunk.js": "/students-app/static/js/3.05942146.chunk.js",
-    "static/js/3.05942146.chunk.js.map": "/students-app/static/js/3.05942146.chunk.js.map",
-    "index.html": "/students-app/index.html",
-    "static/css/2.4c97ca4f.chunk.css.map": "/students-app/static/css/2.4c97ca4f.chunk.css.map",
-    "static/css/main.545fd185.chunk.css.map": "/students-app/static/css/main.545fd185.chunk.css.map",
-    "static/js/2.c8070dd0.chunk.js.LICENSE.txt": "/students-app/static/js/2.c8070dd0.chunk.js.LICENSE.txt",
-    "static/media/HomePage.css": "/students-app/static/media/c.c9c40704.jpg",
-    "static/media/LoginPage.css": "/students-app/static/media/VarelaRound-Regular.3b7ffe17.ttf",
-    "static/media/logo_students.18949146.png": "/students-app/static/media/logo_students.18949146.png"
+    "main.css": "/Students-App/static/css/main.439e5663.chunk.css",
+    "main.js": "/Students-App/static/js/main.049b3b7e.chunk.js",
+    "main.js.map": "/Students-App/static/js/main.049b3b7e.chunk.js.map",
+    "runtime-main.js": "/Students-App/static/js/runtime-main.c3e45fcb.js",
+    "runtime-main.js.map": "/Students-App/static/js/runtime-main.c3e45fcb.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/Students-App/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.c8070dd0.chunk.js": "/Students-App/static/js/2.c8070dd0.chunk.js",
+    "static/js/2.c8070dd0.chunk.js.map": "/Students-App/static/js/2.c8070dd0.chunk.js.map",
+    "static/js/3.05942146.chunk.js": "/Students-App/static/js/3.05942146.chunk.js",
+    "static/js/3.05942146.chunk.js.map": "/Students-App/static/js/3.05942146.chunk.js.map",
+    "index.html": "/Students-App/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/Students-App/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.439e5663.chunk.css.map": "/Students-App/static/css/main.439e5663.chunk.css.map",
+    "static/js/2.c8070dd0.chunk.js.LICENSE.txt": "/Students-App/static/js/2.c8070dd0.chunk.js.LICENSE.txt",
+    "static/media/HomePage.css": "/Students-App/static/media/c.c9c40704.jpg",
+    "static/media/LoginPage.css": "/Students-App/static/media/VarelaRound-Regular.3b7ffe17.ttf",
+    "static/media/logo_students.18949146.png": "/Students-App/static/media/logo_students.18949146.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.3ee26b24.js",
+    "static/js/runtime-main.c3e45fcb.js",
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.c8070dd0.chunk.js",
-    "static/css/main.545fd185.chunk.css",
+    "static/css/main.439e5663.chunk.css",
     "static/js/main.049b3b7e.chunk.js"
   ]
 }

@@ -7,6 +7,7 @@ import { FaLock } from 'react-icons/fa';
 import { IoIosMail } from "react-icons/io";
 import {AiOutlineNumber} from "react-icons/ai";
 import ActiveUserContext from '../../shared/ActiveUserContext';
+import { Redirect } from 'react-router';
 
 function SignupPage({addUser ,users ,onLogin }) {
     const [id ,setId] = useState("");
@@ -16,6 +17,10 @@ function SignupPage({addUser ,users ,onLogin }) {
     const [pwd ,setPwd] = useState("");
     const [showMsg, setShowMsg]= useState(false);
     const activeUser = useContext(ActiveUserContext);
+    
+    if (!activeUser) {
+        return <Redirect to="/"/>
+    }
 
     function signUp(e){
         e.preventDefault();           

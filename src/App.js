@@ -21,7 +21,7 @@ import GetMessagesPage from './pages/GetMessagesPage/GetMessagesPage';
 
 function App() {
     const [users, setUsers] = useState(usersJSON.map( plainuser => new UserModel(plainuser)));
-    const [activeUser, setActiveUser] = useState(users[0]);
+    const [activeUser, setActiveUser] = useState("");
     const [coursesList, setCoursesList] = useState(coursesJSON.map ( course => new CourseModel(course)));
     
     const topicsList = [{"topicId": 1,"topicName":"ערעור"},
@@ -59,6 +59,7 @@ function App() {
         setUsers(users.concat(newUser));
     }
 
+         
   return (
     <ActiveUserContext.Provider value={activeUser}>
     <HashRouter>
@@ -83,7 +84,7 @@ function App() {
             </Route>
             <Route exact path="/updateGrades">
                 <NavBar onLogout={() => setActiveUser(null)}/>
-                <UpdateGrades coursesList={coursesList} users={users} />
+                <UpdateGrades coursesList={coursesList} users={users}/>
             </Route>
             <Route exact path="/getMessages">
                 <NavBar onLogout={() => setActiveUser(null)} messages={messages}/>
